@@ -1,6 +1,6 @@
 var http = require('http');
 
-const port = 80;
+const port = process.env.PORT;
 console.log('listening on port : ' + port);
 http.createServer(onRequest).listen(port);
 
