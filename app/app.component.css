@@ -1,0 +1,7 @@
+.scroll-block {
+  height: 300px;
+  width: 300px;
+  background-color: #eeeeee;
+
+  overflow-y: auto;
+}

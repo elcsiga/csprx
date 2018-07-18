@@ -1,0 +1,8 @@
+<div class='gallery-container' #galleryContainer>
+  <div class='gallery-row' *ngFor="let row of rows">
+    <div class='gallery-item' *ngFor="let item of row" [ngStyle]="getStyle(item)">
+      {{ item.item.width }} x {{ item.item.height }}
+    </div>
+  </div>
+</div>
+
