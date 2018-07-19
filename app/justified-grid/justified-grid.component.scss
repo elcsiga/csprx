@@ -1,0 +1,9 @@
+.justified-grid--container {
+  > .justified-grid--row {
+    > .justified-grid--item {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+  }
+}

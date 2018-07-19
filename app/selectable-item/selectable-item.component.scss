@@ -1,0 +1,31 @@
+.selectable-media {
+  position: relative;
+  height: 100%;
+
+  > .selectable-media--selector {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+
+    input {
+      width: 20px;
+      height: 20px;
+      border: 3px solid black;
+
+      display: none;
+
+      &:checked {
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    > .selectable-media--selector {
+      input {
+        display: block;
+      }
+    }
+  }
+}

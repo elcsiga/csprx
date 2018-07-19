@@ -1,0 +1,10 @@
+<div class='justified-grid--container' #galleryContainer>
+  <div class='justified-grid--row' *ngFor="let row of rows">
+    <div class='justified-grid--item' *ngFor="let item of row"
+         [ngStyle]="{'width.px': item.resizedWidth, 'height.px': item.resizedHeight}">
+      <ng-container *ngTemplateOutlet="itemTemplate;context:item">
+      </ng-container>
+    </div>
+  </div>
+</div>
+

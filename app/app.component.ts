@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import index from '@angular/cli/lib/cli';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,17 @@ export class AppComponent {
   constructor() {
     for (let i = 0; i < 50; i++) {
       this.items.push({
-        width: 500 + Math.floor( Math.random() * 200 ),
+        width: 500 + Math.floor(Math.random() * 200 ),
         height: 300 + Math.floor(Math.random() * 200 ),
-        color: `rgb(${100+Math.floor(Math.random() * 100)},${100+Math.floor(Math.random() * 100)},${100+Math.floor(Math.random() * 100)})`
-      })
+        selected: true,
+        color: `rgb(${150 + Math.floor(Math.random() * 100)},${150 + Math.floor(Math.random() * 100)},${150 + Math.floor(Math.random() * 100)})`
+      });
     }
+  }
+
+  selectItem(index: number, selected: boolean) {
+    this.items[index].selected = selected;
+
+    console.log(this.items[0]);
   }
 }

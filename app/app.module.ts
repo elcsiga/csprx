@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import {MatButtonModule, MatExpansionModule, MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ListComponent} from './list/list.component';
-import { MediaGalleryComponent } from './media-gallery/media-gallery.component';
+import {JustifiedGridComponent} from './justified-grid/justified-grid.component';
+import {SelectableItemComponent} from './selectable-item/selectable-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    MediaGalleryComponent
+    JustifiedGridComponent,
+    SelectableItemComponent
   ],
   imports: [
     BrowserModule,

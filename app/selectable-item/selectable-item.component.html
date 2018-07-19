@@ -1,0 +1,7 @@
+<div class='selectable-media'>
+  <ng-content></ng-content>
+  <div class = 'selectable-media--selector'>
+    <input type="checkbox" [checked]="selected" (change)="onChange($event)">
+  </div>
+</div>
+

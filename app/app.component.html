@@ -2,8 +2,14 @@
 <div>
   <h1>SmartShop demo </h1>
 
-  <app-media-gallery [items]="items">
-
-  </app-media-gallery>
+  <justified-grid [items]="items" [itemTemplate]="demoItem">
+    <ng-template #demoItem let-item="item" let-index="index">
+      <selectable-item [selected]="item.selected" (selectedChange)="selectItem(index, $event)" >
+        <div [ngStyle]="{'background-color': item.color, 'height': '100%' }">
+          #{{index}}
+        </div>
+      </selectable-item>
+    </ng-template>
+  </justified-grid>
 
 </div>
